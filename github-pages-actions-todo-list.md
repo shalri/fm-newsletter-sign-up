@@ -3,11 +3,11 @@
 - [ ] Create Github Repo
 
 - Configure Base Path
-  - [ ] Create `.env.local`
+  - [x] Create `.env.local`
     ```shell
     NEXT_PUBLIC_BASE_PATH=""
     ```
-  - [ ] Edit `.env.production` base path
+  - [x] Edit `.env.production` base path
   ```shell
     NEXT_PUBLIC_BASE_PATH="/github/pages/url"
   ```
