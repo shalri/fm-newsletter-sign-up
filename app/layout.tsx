@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
-  title: "次に(tsugini) | FScode",
-  description: "A basic NextJS template for Frontend Mentor Challenges",
+  title: "Newsletter Sign-up | FScode",
+  description: "A Frontend Mentor challenge",
 };
 
 export default function RootLayout({
@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex min-h-screen flex-col`}>
+      <body
+        className={`${roboto.className} grid min-h-dvh grid-cols-1 place-items-center bg-nl-white antialiased sm:bg-nl-charcoal-grey`}
+      >
         {children}
       </body>
     </html>
