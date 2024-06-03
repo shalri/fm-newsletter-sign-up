@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function ThankYou() {
   const searchParams = useSearchParams();
@@ -20,7 +21,7 @@ export default function ThankYou() {
         Thanks for subscribing!
       </h1>
       <p>
-        A confirmatin email has been sent to {email}. Please opent it and click
+        A confirmatin email has been sent to {email}. Please open it and click
         the button insided to confirm your subscription.
       </p>
       <button onClick={handleDismiss}>Dismiss message</button>

@@ -12,13 +12,10 @@ export default function SignUp() {
     register,
     formState: { errors },
     handleSubmit,
-    // } = useForm<FormValues>();
   } = useForm();
   const router = useRouter();
 
-  // const onSubmit = (e: React.FormEvent) => {
   const onSubmit = () => {
-    // e.preventDefault();
     if (email !== "") {
       const encodedEmail = encodeURIComponent(email);
       router.push(`/subscription-success?email=${encodedEmail}`);
