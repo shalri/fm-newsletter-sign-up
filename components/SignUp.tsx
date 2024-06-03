@@ -12,6 +12,7 @@ export default function SignUp() {
     register,
     formState: { errors },
     handleSubmit,
+    // } = useForm<FormValues>();
   } = useForm();
   const router = useRouter();
 
@@ -56,7 +57,7 @@ export default function SignUp() {
             </label>
             {errors.mail && (
               <p className="text-nl-tomato" role="alert">
-                {errors.mail.message}
+                {errors.mail.message as string}
               </p>
             )}
           </div>
