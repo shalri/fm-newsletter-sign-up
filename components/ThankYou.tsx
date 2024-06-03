@@ -4,10 +4,25 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 
 export default function ThankYou() {
+  // const searchParams = useSearchParams();
+  // const emailParam = searchParams.get("email");
+  // const email = emailParam ? decodeURIComponent(emailParam) : "unknown email";
+  // const router = useRouter();
+  //
+  // const handleDismiss = () => {
+  //   router.push("/");
+  // };
   const searchParams = useSearchParams();
   const emailParam = searchParams.get("email");
-  const email = emailParam ? decodeURIComponent(emailParam) : "unknown email";
+  const [email, setEmail] = useState<string | null>(null);
   const router = useRouter();
+
+  useEffect(() => {
+    // Ensure this code only runs on the client side
+    if (emailParam) {
+      setEmail(decodeURIComponent(emailParam));
+    }
+  }, [emailParam]);
 
   const handleDismiss = () => {
     router.push("/");
