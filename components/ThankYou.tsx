@@ -42,14 +42,15 @@ export default function ThankYou() {
             height={100}
             alt="success"
           />
-      {isExploding && (
-        <ConfettiExplosion
-          force={0.8}
-          duration={3000}
-          particleCount={250}
-          width={1000}
-        />
-      )}
+          {isExploding && (
+            <ConfettiExplosion
+              force={0.8}
+              duration={3000}
+              particleCount={250}
+              width={1000}
+              colors={["#ff693e", "#fe5377", "#e2b714", "#49b8a1"]}
+            />
+          )}
         </div>
         <h1 className="mt-[38px] text-[2.50rem] font-bold leading-[1] sm:mt-10 sm:text-[3.5rem]">
           Thanks for subscribing!
