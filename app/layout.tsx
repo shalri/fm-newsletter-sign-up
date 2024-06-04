@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} flex-cols mx-auto flex min-h-dvh justify-center bg-nl-white antialiased sm:items-center sm:bg-nl-charcoal-grey`}
+        className={`${roboto.className} flex-cols mx-auto flex min-h-dvh justify-center bg-nl-white antialiased sm:items-center sm:bg-nl-charcoal-grey sm:px-4`}
       >
         {children}
       </body>
