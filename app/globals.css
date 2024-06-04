@@ -5,3 +5,60 @@
 .bg-list {
   background-image: url("../public/assets/images/icon-list.svg");
 }
+
+.bg-check {
+  background-image: url("../public/assets/images/icon-success.svg");
+  @apply bg-[length:65px_65px] bg-no-repeat;
+}
+
+@layer components {
+  .loader {
+    width: 90px;
+    height: 12px;
+    --c: hsl(25, 97%, 53%) 50%, #0000 0;
+    background:
+      linear-gradient(90deg, var(--c)) 0 0,
+      linear-gradient(-90deg, var(--c)) 0 0;
+    background-size: 20px 100%;
+    background-repeat: repeat-x;
+    animation: loader 1s infinite linear;
+  }
+  @keyframes loader {
+    100% {
+      background-position:
+        -20px 0,
+        20px 0;
+    }
+  }
+
+  .nl-hover {
+    @apply bg-nl-dark-slate-grey;
+    position: relative;
+    overflow: hidden;
+    @apply transition-shadow duration-500 ease-out hover:shadow-xl hover:shadow-nl-tomato/50;
+  }
+  .nl-hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      hsl(347, 99%, 66%) 0%,
+      hsl(13, 100%, 62%) 80%,
+      hsl(13, 100%, 62%) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 0;
+  }
+  .nl-hover:hover::before {
+    opacity: 1;
+  }
+  .nl-hover-content {
+    position: relative;
+    z-index: 1;
+  }
+}

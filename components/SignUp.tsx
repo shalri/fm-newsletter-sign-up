@@ -26,7 +26,7 @@ export default function SignUp() {
     <article className="mx-auto grid max-w-[375px] grid-cols-1">
       <div className="h-auto w-full overflow-hidden">
         <Image
-          src="../assets/images/illustration-sign-up-mobile.svg"
+          src="./assets/images/illustration-sign-up-mobile.svg"
           width={375}
           height={375}
           alt="banner image"
@@ -46,7 +46,7 @@ export default function SignUp() {
           ))}
         </ul>
       </section>
-      <form onSubmit={handleSubmit(onSubmit)} className="mt-10">
+      <form onSubmit={handleSubmit(onSubmit)} className="mt-10 px-6">
         <div className="flex flex-col">
           <div className="mb-2 flex justify-between text-[0.80rem] font-bold">
             <label htmlFor="email" className=" text-nl-dark-slate-grey">
@@ -71,7 +71,7 @@ export default function SignUp() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="email@company.com"
             className={cn(
-              "form-input h-14 rounded-lg border-nl-grey/50 px-6 ring-nl-tomato  focus:ring-0 focus:ring-offset-0",
+              "form-input h-14 rounded-lg border-nl-grey/50 px-6 ring-nl-tomato  transition-all duration-500 focus:ring-0 focus:ring-offset-0",
               {
                 "bg-nl-tomato/20 text-nl-tomato focus:border-nl-tomato":
                   errors.mail,
@@ -83,9 +83,11 @@ export default function SignUp() {
         </div>
         <button
           type="submit"
-          className="mb-10 mt-6 h-14 w-full rounded-lg bg-nl-dark-slate-grey font-bold text-nl-white"
+          className="nl-hover mb-10 mt-6 h-14 w-full rounded-lg bg-nl-dark-slate-grey font-bold text-nl-white"
         >
-          Subscribe to monthly newsletter
+          <span className="nl-hover-content">
+            Subscribe to monthly newsletter
+          </span>
         </button>
       </form>
     </article>
