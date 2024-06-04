@@ -34,16 +34,7 @@ export default function ThankYou() {
       style={props}
       className="grid min-h-dvh grid-cols-1 content-between px-6 text-nl-dark-slate-grey sm:h-[520px] sm:min-h-0 sm:max-w-[505px] sm:content-start sm:rounded-[2rem] sm:bg-nl-white sm:px-16"
     >
-      {isExploding && (
-        <ConfettiExplosion
-          force={0.6}
-          duration={3000}
-          particleCount={250}
-          width={1600}
-        />
-      )}
       <div className="pt-[150px] sm:pt-12">
-        {/* {isExploding && <ConfettiExplosion force={0.6} duration={3000} particleCount={150} />} */}
         <div className="h-[64px] w-[64px]">
           <Image
             src="./assets/images/icon-success.svg"
@@ -51,6 +42,14 @@ export default function ThankYou() {
             height={100}
             alt="success"
           />
+      {isExploding && (
+        <ConfettiExplosion
+          force={0.8}
+          duration={3000}
+          particleCount={250}
+          width={1000}
+        />
+      )}
         </div>
         <h1 className="mt-[38px] text-[2.50rem] font-bold leading-[1] sm:mt-10 sm:text-[3.5rem]">
           Thanks for subscribing!
