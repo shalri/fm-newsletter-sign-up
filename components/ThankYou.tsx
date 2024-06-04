@@ -10,8 +10,8 @@ export default function ThankYou() {
   const email = emailParam ? decodeURIComponent(emailParam) : "unknown email";
 
   return (
-    <section className="grid min-h-dvh grid-cols-1 content-center px-6 text-nl-dark-slate-grey sm:h-[520px] sm:min-h-0 sm:max-w-[505px] sm:rounded-[2rem] sm:bg-nl-white">
-      <div className="pt-0">
+    <section className="grid min-h-dvh grid-cols-1 content-between px-6 text-nl-dark-slate-grey sm:h-[520px] sm:min-h-0 sm:max-w-[505px] sm:content-start sm:rounded-[2rem] sm:bg-nl-white sm:px-16">
+      <div className="pt-[150px] sm:pt-12">
         <div className="h-[64px] w-[64px]">
           <Image
             src="./assets/images/icon-success.svg"
@@ -20,7 +20,7 @@ export default function ThankYou() {
             alt="success"
           />
         </div>
-        <h1 className="mt-[38px] text-[2.50rem] font-bold leading-[1]">
+        <h1 className="mt-[38px] text-[2.50rem] font-bold leading-[1] sm:mt-10 sm:text-[3.5rem]">
           Thanks for subscribing!
         </h1>
         <p className="mt-6 text-nl-charcoal-grey">
@@ -30,7 +30,7 @@ export default function ThankYou() {
       </div>
       <Link
         href="/"
-        className="nl-hover mb-10 mt-6 flex h-14 w-full items-center justify-center rounded-lg font-bold text-nl-white "
+        className="nl-hover mb-10 mt-6 flex h-14 w-full items-center justify-center rounded-lg font-bold text-nl-white sm:mb-0 sm:mt-10 "
       >
         <span className="nl-hover-content">Dismiss message</span>
       </Link>
