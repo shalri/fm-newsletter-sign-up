@@ -48,7 +48,7 @@ export default function ThankYou() {
               duration={3000}
               particleCount={250}
               width={1000}
-              colors={["#ff693e", "#fe5377", "#e2b714", "#49b8a1"]}
+              colors={["#ff693e", "#fe5377", "#e2b714", "#1212a5"]}
             />
           )}
         </div>
