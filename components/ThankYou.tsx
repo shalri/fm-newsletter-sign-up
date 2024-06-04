@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function ThankYou() {
   const searchParams = useSearchParams();
@@ -11,9 +10,8 @@ export default function ThankYou() {
   const email = emailParam ? decodeURIComponent(emailParam) : "unknown email";
 
   return (
-    <section className="grid min-h-dvh grid-cols-1 content-between px-6 text-nl-dark-slate-grey">
-      {/* <div className="min-h-[26.5%] w-full border-black" /> */}
-      <div className="pt-[150px]">
+    <section className="grid min-h-dvh grid-cols-1 content-center px-6 text-nl-dark-slate-grey sm:h-[520px] sm:min-h-0 sm:max-w-[505px] sm:rounded-[2rem] sm:bg-nl-white">
+      <div className="pt-0">
         <div className="h-[64px] w-[64px]">
           <Image
             src="./assets/images/icon-success.svg"
